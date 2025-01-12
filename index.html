@@ -10,15 +10,14 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      line-height: 1.6;
-      background-color: #f7f9fc; /* Light background for readability */
-      color: #333; /* Neutral dark text color */
+      background-color: #f7f9fc; /* Light background */
+      color: #333; /* Neutral text color */
     }
 
     header {
       background: #2b6777; /* Deep teal */
       color: #fff;
-      padding: 1rem 0;
+      padding: 1rem;
       text-align: center;
     }
 
@@ -38,59 +37,64 @@
     }
 
     a:hover {
-      color: #e76f51; /* Accent coral color for hover effects */
+      color: #e76f51; /* Accent coral for hover effects */
       text-decoration: underline;
     }
 
-    /* Grid container styles */
+    /* Project grid styles */
     .project-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr); /* Four columns */
-      gap: 1.5rem; /* Space between items */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; /* Even spacing between items */
+      gap: 1.5rem;
       margin-top: 2rem;
     }
 
     .project-card {
-      background: #ffffff; /* White cards for contrast */
+      flex: 0 0 calc(25% - 1.5rem); /* Each card takes 25% width, minus the gap */
+      background: #fff; /* White background for contrast */
       padding: 1.5rem;
       border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
       transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-align: center;
     }
 
     .project-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Slight hover effect */
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     }
 
     .project-card strong {
       font-size: 1.1rem;
+      display: block;
+      margin-bottom: 0.5rem;
     }
 
     footer {
       text-align: center;
       margin-top: 2rem;
-      padding: 1rem 0;
+      padding: 1rem;
       background: #2b6777;
       color: #fff;
     }
 
-    /* Responsive design for smaller screens */
+    /* Responsive design */
     @media (max-width: 1200px) {
-      .project-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
+      .project-card {
+        flex: 0 0 calc(33.33% - 1.5rem); /* 3 cards per row */
       }
     }
 
     @media (max-width: 768px) {
-      .project-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+      .project-card {
+        flex: 0 0 calc(50% - 1.5rem); /* 2 cards per row */
       }
     }
 
     @media (max-width: 480px) {
-      .project-grid {
-        grid-template-columns: 1fr; /* 1 column on extra small screens */
+      .project-card {
+        flex: 0 0 100%; /* 1 card per row */
       }
     }
   </style>
@@ -101,62 +105,46 @@
     <p>ML/DL Engineer | Scientific Researcher</p>
   </header>
   <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        Experienced Machine Learning and Computer Vision professional with expertise in developing, optimizing, and deploying advanced deep learning models. My work spans domains such as image recognition, anomaly detection, neural signal processing, and speech synthesis.
-      </p>
-    </section>
-
     <section id="projects">
       <h2>My Projects</h2>
       <div class="project-grid">
         <div class="project-card">
-          <strong><a href="https://github.com/owaismujtaba/EEGAnotator">EEG Data Annotator</a></strong>
-          <p>Developed a system for efficient EEG-audio data synchronization and annotation, aiding neural signal processing research.</p>
+          <strong><a href="#">EEG Data Annotator</a></strong>
+          <p>Synchronized and annotated EEG-audio data for neural signal research.</p>
         </div>
         <div class="project-card">
-          <strong><a href="https://github.com/owaismujtaba/SemanticDecoding">Neural Signal Classification</a></strong>
-          <p>Achieved 77.89% accuracy in distinguishing perception versus imagined speech, outperforming traditional ML models.</p>
+          <strong><a href="#">Neural Signal Classification</a></strong>
+          <p>Achieved 77.89% accuracy in classifying perception vs. imagined speech.</p>
         </div>
         <div class="project-card">
-          <strong><a href="https://github.com/owaismujtaba/kyc_checker">Fake Image Detection</a></strong>
-          <p>Built a deep learning model for detecting manipulated images, leveraging CNNs and image forensics for enhanced accuracy.</p>
+          <strong><a href="#">Fake Image Detection</a></strong>
+          <p>Created a deep learning model for detecting manipulated images.</p>
         </div>
         <div class="project-card">
-          <strong>Precision Climate Analysis</strong>
-          <p>Conducted a comprehensive study of the Tisza watershed climate, identifying significant temperature and precipitation trends over 119 years.</p>
+          <strong><a href="#">Precision Climate Analysis</a></strong>
+          <p>Analyzed Tisza watershed climate trends over 119 years.</p>
         </div>
         <div class="project-card">
-          <strong>COVID-19 Forecasting</strong>
-          <p>Generated short-term COVID-19 forecasts for Hungary, supporting public health policies with data-driven infection trajectory insights.</p>
+          <strong><a href="#">COVID-19 Forecasting</a></strong>
+          <p>Generated short-term COVID-19 forecasts for public health insights.</p>
         </div>
         <div class="project-card">
-          <strong>DDoS Detection</strong>
-          <p>Developed and tested a lightweight DDoS detection model optimized for resource-constrained environments.</p>
+          <strong><a href="#">DDoS Detection</a></strong>
+          <p>Developed lightweight models for real-time DDoS detection.</p>
         </div>
         <div class="project-card">
-          <strong>Adversarial Robustness Testing</strong>
-          <p>Created adversarial attack pipelines to test the robustness of object detection models in real-world scenarios.</p>
+          <strong><a href="#">Adversarial Robustness Testing</a></strong>
+          <p>Tested robustness of object detection models with adversarial attacks.</p>
         </div>
         <div class="project-card">
-          <strong>Sequence Alignment Pipeline</strong>
-          <p>Streamlined sequence alignment processes for molecular studies, enhancing research efficiency and data quality.</p>
-        </div>
-        <div class="project-card">
-          <strong>OCR Optimization</strong>
-          <p>Conducted hyperparameter tuning and applied transfer learning techniques to improve OCR accuracy and efficiency.</p>
-        </div>
-        <div class="project-card">
-          <strong>Neural Speech Synthesis</strong>
-          <p>Pioneered a speech synthesis algorithm using high-gamma band EEG data with a NeuroIncept Decoder, achieving robust correlations between predicted and actual audio spectrograms.</p>
+          <strong><a href="#">Sequence Alignment Pipeline</a></strong>
+          <p>Streamlined processes for molecular sequence alignment studies.</p>
         </div>
       </div>
     </section>
-
-    <footer>
-      <p>Contact: <a href="mailto:owais.mujtaba123@gmail.com">owais.mujtaba123@gmail.com</a></p>
-    </footer>
   </main>
+  <footer>
+    <p>Contact: <a href="mailto:owais.mujtaba123@gmail.com">owais.mujtaba123@gmail.com</a></p>
+  </footer>
 </body>
 </html>
