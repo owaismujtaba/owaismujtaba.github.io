@@ -10,12 +10,12 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f7f9fc; /* Light background */
-      color: #333; /* Neutral text color */
+      background-color: #f7f9fc;
+      color: #333;
     }
 
     header {
-      background: #2b6777; /* Deep teal */
+      background: #2b6777;
       color: #fff;
       padding: 1rem;
       text-align: center;
@@ -28,16 +28,16 @@
     }
 
     h1, h2 {
-      color: #1a3c40; /* Darker teal for headings */
+      color: #1a3c40;
     }
 
     a {
-      color: #2a9d8f; /* Muted green for links */
+      color: #2a9d8f;
       text-decoration: none;
     }
 
     a:hover {
-      color: #e76f51; /* Accent coral for hover effects */
+      color: #e76f51;
       text-decoration: underline;
     }
 
@@ -45,17 +45,17 @@
     .project-grid {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between; /* Even spacing between items */
+      justify-content: space-between;
       gap: 1.5rem;
       margin-top: 2rem;
     }
 
     .project-card {
-      flex: 0 0 calc(25% - 1.5rem); /* Each card takes 25% width, minus the gap */
-      background: #fff; /* White background for contrast */
+      flex: 0 0 calc(25% - 1.5rem);
+      background: #fff;
       padding: 1.5rem;
       border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       text-align: center;
     }
@@ -65,10 +65,11 @@
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     }
 
-    .project-card strong {
-      font-size: 1.1rem;
-      display: block;
-      margin-bottom: 0.5rem;
+    .project-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 1rem;
     }
 
     footer {
@@ -82,19 +83,19 @@
     /* Responsive design */
     @media (max-width: 1200px) {
       .project-card {
-        flex: 0 0 calc(33.33% - 1.5rem); /* 3 cards per row */
+        flex: 0 0 calc(33.33% - 1.5rem);
       }
     }
 
     @media (max-width: 768px) {
       .project-card {
-        flex: 0 0 calc(50% - 1.5rem); /* 2 cards per row */
+        flex: 0 0 calc(50% - 1.5rem);
       }
     }
 
     @media (max-width: 480px) {
       .project-card {
-        flex: 0 0 100%; /* 1 card per row */
+        flex: 0 0 100%;
       }
     }
   </style>
@@ -109,38 +110,58 @@
       <h2>My Projects</h2>
       <div class="project-grid">
         <div class="project-card">
-          <strong><a href="#">NeuroIncept Decoder for High-Fidelity Speech Reconstruction from Neural Activity</a></strong>
-          <p>Achieved 77.89% accuracy in classifying perception vs. imagined speech.</p>
-        </div>
-        <div class="project-card">
+          <a href="#">
+            <img src="path/to/eeg-annotator-image.jpg" alt="EEG Data Annotator">
+          </a>
           <strong><a href="#">EEG Data Annotator</a></strong>
           <p>Synchronized and annotated EEG-audio data for neural signal research.</p>
         </div>
         <div class="project-card">
-          <strong><a href="#">Decoding the Mind: Neural Differences and Semantic Representation in Perception and Imagination Across Modalities</a></strong>
+          <a href="#">
+            <img src="path/to/neural-signal-classification.jpg" alt="Neural Signal Classification">
+          </a>
+          <strong><a href="#">Neural Signal Classification</a></strong>
           <p>Achieved 77.89% accuracy in classifying perception vs. imagined speech.</p>
         </div>
         <div class="project-card">
+          <a href="#">
+            <img src="path/to/fake-image-detection.jpg" alt="Fake Image Detection">
+          </a>
           <strong><a href="#">Fake Image Detection</a></strong>
           <p>Created a deep learning model for detecting manipulated images.</p>
         </div>
         <div class="project-card">
+          <a href="#">
+            <img src="path/to/climate-analysis.jpg" alt="Precision Climate Analysis">
+          </a>
           <strong><a href="#">Precision Climate Analysis</a></strong>
           <p>Analyzed Tisza watershed climate trends over 119 years.</p>
         </div>
         <div class="project-card">
+          <a href="#">
+            <img src="path/to/covid-forecasting.jpg" alt="COVID-19 Forecasting">
+          </a>
           <strong><a href="#">COVID-19 Forecasting</a></strong>
           <p>Generated short-term COVID-19 forecasts for public health insights.</p>
         </div>
         <div class="project-card">
+          <a href="#">
+            <img src="path/to/ddos-detection.jpg" alt="DDoS Detection">
+          </a>
           <strong><a href="#">DDoS Detection</a></strong>
           <p>Developed lightweight models for real-time DDoS detection.</p>
         </div>
         <div class="project-card">
+          <a href="#">
+            <img src="path/to/adversarial-testing.jpg" alt="Adversarial Robustness Testing">
+          </a>
           <strong><a href="#">Adversarial Robustness Testing</a></strong>
           <p>Tested robustness of object detection models with adversarial attacks.</p>
         </div>
         <div class="project-card">
+          <a href="#">
+            <img src="path/to/sequence-alignment.jpg" alt="Sequence Alignment Pipeline">
+          </a>
           <strong><a href="#">Sequence Alignment Pipeline</a></strong>
           <p>Streamlined processes for molecular sequence alignment studies.</p>
         </div>
