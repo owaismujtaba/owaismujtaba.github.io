@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Summary - Neural Speech Decoding</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+    <style>
+        :root {
+            --indigo-deep: #1e1b4b;
+            --indigo-primary: #4f46e5;
+            --slate-text: #334155;
+            --slate-light: #f8fafc;
+            --border-color: #e2e8f0;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--slate-light);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .slide-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header-stripe {
+            background-color: var(--indigo-deep);
+            height: 10px;
+            width: 100%;
+        }
+
+        .nav-bar {
+            padding: 40px 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .main-layout {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 0 80px 60px 80px;
+            gap: 60px;
+            align-items: stretch;
+        }
+
+        /* Paper Card Styling */
+        .paper-card {
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03);
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .paper-header {
+            padding: 24px 30px;
+            border-bottom: 1px solid #f1f5f9;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .concept-tag {
+            background: #eef2ff;
+            color: #4338ca;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-weight: 800;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+
+        .method-item {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+            align-items: center;
+        }
+
+        .method-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--slate-light);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--indigo-primary);
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .chart-frame {
+            flex: 1;
+            padding: 20px 30px;
+            position: relative;
+            min-height: 250px;
+        }
+
+        .footer {
+            padding: 20px 60px;
+            border-top: 1px solid #f1f5f9;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide-container">
+        <div class="header-stripe"></div>
+
+        <nav class="nav-bar">
+            <div class="flex items-center gap-4">
+                <div
+                    class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-indigo-100">
+                    <i class="fas fa-brain text-lg"></i>
+                </div>
+                <div>
+                    <span class="font-bold text-slate-900 block tracking-tight text-xl">DeepRestore</span>
+                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Research Group</span>
+                </div>
+            </div>
+            <div class="text-right">
+                <span class="text-slate-400 font-bold text-[11px] tracking-widest uppercase">Year 2025 Research
+                    Summary</span>
+                <p class="text-xs text-indigo-500 font-bold">Algorithmic Milestone Series</p>
+            </div>
+        </nav>
+
+        <main class="main-layout">
+            <!-- Paper 1: NeuroIncept -->
+            <section class="paper-card">
+                <div class="paper-header">
+                    <div>
+                        <span class="concept-tag">Neural to Audio Spectrogram</span>
+                        <h2 class="text-2xl font-black text-slate-900 leading-tight">NeuroIncept Decoder</h2>
+                        <h3 class="text-xs font-bold text-slate-400 uppercase mt-1">NeuroIncept Decoder for
+                            High-Fidelity Speech Reconstruction from Neural Activity</h3>
+                        <div class="flex items-center gap-4 mt-2">
+                            <p class="text-sm text-indigo-500 font-bold">ICASSP 2025</p>
+                            <a href="https://ieeexplore.ieee.org/document/10888547" target="_blank"
+                                class="text-[10px] bg-slate-100 px-2 py-1 rounded-full font-bold text-slate-500 hover:bg-indigo-600 hover:text-white transition-colors">
+                                <i class="fas fa-file-pdf mr-1"></i>Read Paper
+                            </a>
+                            <span class="text-[9px] text-slate-400 font-mono">DOI: 10.1109/10888547</span>
+                        </div>
+                    </div>
+                    <div
+                        class="px-3 py-1 bg-emerald-50 text-emerald-600 text-[10px] font-black rounded border border-emerald-100 uppercase">
+                        Pearson r = 0.91</div>
+                </div>
+
+                <div class="px-[30px] pt-6">
+                    <div class="grid grid-cols-1 gap-1">
+                        <div class="method-item">
+                            <div class="method-icon"><i class="fas fa-bolt"></i></div>
+                            <span class="text-xs font-bold text-slate-600">Input: sEEG (High-gamma 70-170Hz)</span>
+                        </div>
+                        <div class="method-item">
+                            <div class="method-icon"><i class="fas fa-layer-group"></i></div>
+                            <span class="text-xs font-bold text-slate-600">Hybrid Inception + Stacked GRUs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-frame" id="neuroChart"></div>
+            </section>
+
+            <!-- Paper 2: LM Embeddings -->
+            <section class="paper-card">
+                <div class="paper-header">
+                    <div>
+                        <span class="concept-tag">Embeddings to Neural Activity</span>
+                        <h2 class="text-2xl font-black text-slate-900 leading-tight">LLM Embeddings</h2>
+                        <h3 class="text-xs font-bold text-slate-400 uppercase mt-1">Recreating Neural Activity During
+                            Speech Production with Language and Speech Model Embeddings</h3>
+                        <div class="flex items-center gap-4 mt-2">
+                            <p class="text-sm text-indigo-500 font-bold">Interspeech 2025</p>
+                            <a href="https://www.isca-archive.org/interspeech_2025/khanday25_interspeech.html"
+                                target="_blank"
+                                class="text-[10px] bg-slate-100 px-2 py-1 rounded-full font-bold text-slate-500 hover:bg-indigo-600 hover:text-white transition-colors">
+                                <i class="fas fa-file-pdf mr-1"></i>Read Paper
+                            </a>
+                            <span class="text-[9px] text-slate-400 font-mono">DOI: 10.21437/Interspeech.2025-1400</span>
+                        </div>
+                    </div>
+                    <div
+                        class="px-3 py-1 bg-indigo-50 text-indigo-600 text-[10px] font-black rounded border border-indigo-100 uppercase">
+                        GPT-2 Optimized</div>
+                </div>
+
+                <div class="px-[30px] pt-6">
+                    <div class="grid grid-cols-1 gap-1">
+                        <div class="method-item">
+                            <div class="method-icon"><i class="fas fa-language"></i></div>
+                            <span class="text-xs font-bold text-slate-600">Models: GPT-2.0, FastText, Wav2Vec 2.0</span>
+                        </div>
+                        <div class="method-item">
+                            <div class="method-icon"><i class="fas fa-chart-line"></i></div>
+                            <span class="text-xs font-bold text-slate-600">Mapping: Mean PCC + SD (N=9 Subjects)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-frame" id="embeddingChart"></div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="flex items-center gap-10">
+                <div class="flex items-center gap-3 text-indigo-600 font-black uppercase text-[10px] tracking-widest">
+                    <i class="fas fa-graduation-cap text-lg"></i>
+                    <span>University of Granada</span>
+                </div>
+                <div class="h-4 w-[1px] bg-slate-200"></div>
+                <div class="text-slate-400 text-[11px] font-medium tracking-wide">
+                    DeepRestore: Advancing Neural Restoration Technologies
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <div class="flex gap-1">
+                    <div class="w-2 h-1.5 bg-slate-200 rounded-full"></div>
+                    <div class="w-2 h-1.5 bg-slate-200 rounded-full"></div>
+                    <div class="w-8 h-1.5 bg-indigo-600 rounded-full"></div>
+                    <div class="w-2 h-1.5 bg-slate-200 rounded-full"></div>
+                </div>
+                <span class="text-sm font-black text-slate-800">03 <span class="text-slate-300 mx-1">/</span> 04</span>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const chartColor = '#4f46e5';
+        const secondaryColor = '#cbd5e1';
+
+        // NeuroChart
+        const neuroChart = echarts.init(document.getElementById('neuroChart'));
+        neuroChart.setOption({
+            grid: { top: 40, bottom: 40, left: 40, right: 20 },
+            xAxis: {
+                type: 'category',
+                data: ['NeuroIncept', 'CNN', 'FCN', 'Linear'],
+                axisLine: { lineStyle: { color: '#e2e8f0' } },
+                axisLabel: { fontStyle: 'bold', fontSize: 10, color: '#64748b' }
+            },
+            yAxis: {
+                type: 'value', min: 0.6, max: 0.92,
+                splitLine: { lineStyle: { type: 'dashed', color: '#f1f5f9' } },
+                axisLabel: { color: '#94a3b8', fontSize: 10 }
+            },
+            series: [{
+                data: [0.9179, 0.8988, 0.8907, 0.7050],
+                type: 'bar',
+                barWidth: '45%',
+                itemStyle: {
+                    borderRadius: [6, 6, 0, 0],
+                    color: (params) => params.dataIndex === 0 ? chartColor : secondaryColor
+                }
+            }]
+        });
+
+        // Embedding Chart
+        const embeddingChart = echarts.init(document.getElementById('embeddingChart'));
+        embeddingChart.setOption({
+            grid: { top: 60, bottom: 40, left: 40, right: 20 },
+            legend: { top: 0, right: 20, icon: 'circle', textStyle: { fontSize: 10, fontWeight: 'bold' } },
+            xAxis: {
+                type: 'category',
+                data: ['S01', 'S02', 'S03', 'S04', 'S05', 'S06', 'S07', 'S08', 'S09'],
+                axisLine: { lineStyle: { color: '#e2e8f0' } },
+                axisLabel: { fontStyle: 'bold', fontSize: 10, color: '#64748b' }
+            },
+            yAxis: {
+                type: 'value', min: 0.2, max: 1.0,
+                splitLine: { lineStyle: { type: 'dashed', color: '#f1f5f9' } },
+                axisLabel: { color: '#94a3b8', fontSize: 10 }
+            },
+            series: [
+                {
+                    name: 'GPT-2.0',
+                    type: 'line',
+                    smooth: true,
+                    showSymbol: true,
+                    symbolSize: 6,
+                    lineStyle: { width: 3, color: '#4f46e5' },
+                    itemStyle: { color: '#4f46e5' },
+                    data: [0.94, 0.97, 0.93, 0.99, 0.88, 0.95, 0.81, 0.93, 0.78]
+                },
+                {
+                    name: 'FastText',
+                    type: 'line',
+                    smooth: true,
+                    showSymbol: true,
+                    symbolSize: 6,
+                    lineStyle: { width: 2, color: '#10b981', type: 'dotted' },
+                    itemStyle: { color: '#10b981' },
+                    data: [0.94, 0.97, 0.93, 0.99, 0.88, 0.95, 0.81, 0.93, 0.79]
+                },
+                {
+                    name: 'Wav2Vec2.0',
+                    type: 'line',
+                    smooth: true,
+                    showSymbol: true,
+                    symbolSize: 6,
+                    lineStyle: { width: 2, color: '#f59e0b', type: 'dashed' },
+                    itemStyle: { color: '#f59e0b' },
+                    data: [0.82, 0.82, 0.86, 0.99, 0.74, 0.93, 0.42, 0.92, 0.25]
+                }
+            ]
+        });
+
+        window.addEventListener('resize', () => {
+            neuroChart.resize();
+            embeddingChart.resize();
+        });
+
+        // Mouse Navigation
+        document.addEventListener('click', (e) => {
+            if (e.button === 0 && !e.target.closest('a, button, .paper-card')) {
+                window.location.href = '04_future_directions.html';
+            }
+        });
+
+        document.addEventListener('contextmenu', (e) => {
+            if (!e.target.closest('a, button, .paper-card')) {
+                e.preventDefault();
+                window.location.href = '02_ugrmind.html';
+            }
+        });
+    </script>
+</body>
+
+</html>
