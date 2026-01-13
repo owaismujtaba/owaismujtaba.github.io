@@ -171,6 +171,64 @@
             color: #4338ca;
             margin-right: 15px;
         }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                padding: 0 40px 40px 40px;
+            }
+
+            .nav-bar {
+                padding: 30px 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-bar {
+                padding: 20px 30px;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .main-content {
+                padding: 0 30px 30px 30px;
+            }
+
+            .charts-container {
+                grid-template-columns: 1fr;
+            }
+
+            .stimuli-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer {
+                padding: 0 30px;
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-bar {
+                padding: 15px 20px;
+            }
+
+            .main-content {
+                padding: 0 20px 20px 20px;
+            }
+
+            .spec-card {
+                padding: 15px;
+            }
+
+            .stimuli-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 

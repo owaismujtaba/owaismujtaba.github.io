@@ -170,6 +170,89 @@
             color: #4f46e5;
             border: 1px solid #6366f1;
         }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 0 40px 40px 40px;
+            }
+
+            .nav-bar {
+                padding: 30px 40px;
+            }
+
+            .hero-title {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-bar {
+                padding: 20px 30px;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .main-layout {
+                padding: 0 30px 30px 30px;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .pillar-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .footer {
+                padding: 20px 30px;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            #chart-container {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-bar {
+                padding: 15px 20px;
+            }
+
+            .main-layout {
+                padding: 0 20px 20px 20px;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .concept-tag {
+                font-size: 0.7rem;
+                padding: 6px 14px;
+            }
+
+            .monitor-box {
+                padding: 25px;
+            }
+
+            #chart-container {
+                height: 200px;
+            }
+
+            .pillar-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 

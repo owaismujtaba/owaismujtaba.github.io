@@ -178,6 +178,66 @@
             bottom: -150px;
             left: -150px;
         }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .portal-card {
+                padding: 40px 30px;
+                width: 95%;
+                border-radius: 32px;
+            }
+
+            .title {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .slide-previews {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                margin-top: 40px;
+            }
+
+            .launch-btn {
+                padding: 18px 40px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .portal-card {
+                padding: 30px 20px;
+            }
+
+            .brand-logo {
+                width: 60px;
+                height: 60px;
+                font-size: 2rem;
+            }
+
+            .title {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 0.875rem;
+                margin-bottom: 30px;
+            }
+
+            .slide-previews {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .launch-btn {
+                padding: 16px 32px;
+                font-size: 0.95rem;
+                width: 100%;
+            }
+        }
     </style>
 </head>
 

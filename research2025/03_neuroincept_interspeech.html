@@ -134,6 +134,70 @@
             align-items: center;
             background: white;
         }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 0 40px 40px 40px;
+            }
+
+            .nav-bar {
+                padding: 30px 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-bar {
+                padding: 20px 30px;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .main-layout {
+                padding: 0 30px 30px 30px;
+            }
+
+            .paper-header {
+                padding: 20px;
+            }
+
+            .chart-frame {
+                padding: 15px 20px;
+                min-height: 200px;
+            }
+
+            .footer {
+                padding: 20px 30px;
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-bar {
+                padding: 15px 20px;
+            }
+
+            .main-layout {
+                padding: 0 20px 20px 20px;
+            }
+
+            .paper-header {
+                padding: 15px;
+            }
+
+            .concept-tag {
+                font-size: 0.65rem;
+                padding: 5px 12px;
+            }
+
+            .chart-frame {
+                padding: 10px 15px;
+            }
+        }
     </style>
 </head>
 
