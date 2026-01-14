@@ -44,7 +44,7 @@
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.5);
             border-radius: 48px;
-            padding: 80px;
+            padding: clamp(40px, 6vw, 80px);
             max-width: 1000px;
             width: 90%;
             box-shadow: 0 50px 100px rgba(15, 23, 42, 0.1);
@@ -77,12 +77,12 @@
         }
 
         .title {
-            font-size: 3.5rem;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
             font-weight: 900;
             letter-spacing: -1px;
             color: #0f172a;
             line-height: 1.1;
-            margin-bottom: 20px;
+            margin-bottom: clamp(15px, 2vh, 20px);
         }
 
         .subtitle {
@@ -97,11 +97,11 @@
         .launch-btn {
             background: var(--indigo-primary);
             color: white;
-            padding: 22px 50px;
+            padding: clamp(16px, 2vh, 22px) clamp(32px, 4vw, 50px);
             border-radius: 20px;
             font-family: 'Montserrat', sans-serif;
             font-weight: 800;
-            font-size: 1.1rem;
+            font-size: clamp(1rem, 1.2vw, 1.1rem);
             display: inline-flex;
             align-items: center;
             gap: 15px;

@@ -47,7 +47,7 @@
         }
 
         .nav-bar {
-            padding: 40px 80px;
+            padding: clamp(20px, 3vh, 40px) clamp(30px, 5vw, 80px);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -57,8 +57,8 @@
             flex: 1;
             display: grid;
             grid-template-columns: 1fr 2.5fr;
-            padding: 0 80px 60px 80px;
-            gap: 60px;
+            padding: 0 clamp(30px, 5vw, 80px) clamp(30px, 4vh, 60px) clamp(30px, 5vw, 80px);
+            gap: clamp(40px, 4vw, 60px);
             min-height: 0;
         }
 
@@ -73,7 +73,7 @@
         .spec-card {
             background-color: #fff;
             border-radius: 12px;
-            padding: 20px;
+            padding: clamp(15px, 1.5vw, 20px);
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
             border-left: 5px solid #6366f1;
             border-top: 1px solid #e2e8f0;
@@ -127,8 +127,8 @@
             flex: 1;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            padding: 20px;
+            gap: clamp(15px, 1.5vw, 20px);
+            padding: clamp(15px, 1.5vw, 20px);
             min-height: 0;
         }
 

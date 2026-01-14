@@ -52,7 +52,7 @@
         }
 
         .nav-bar {
-            padding: 40px 80px;
+            padding: clamp(20px, 3vh, 40px) clamp(30px, 5vw, 80px);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -62,8 +62,8 @@
             flex: 1;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            padding: 0 80px 60px 80px;
-            gap: 60px;
+            padding: 0 clamp(30px, 5vw, 80px) clamp(30px, 4vh, 60px) clamp(30px, 5vw, 80px);
+            gap: clamp(40px, 4vw, 60px);
             align-items: stretch;
         }
 
@@ -79,7 +79,7 @@
         }
 
         .paper-header {
-            padding: 24px 30px;
+            padding: clamp(20px, 2vh, 24px) clamp(25px, 2.5vw, 30px);
             border-bottom: 1px solid #f1f5f9;
             display: flex;
             justify-content: space-between;
@@ -121,9 +121,9 @@
 
         .chart-frame {
             flex: 1;
-            padding: 20px 30px;
+            padding: clamp(15px, 1.5vw, 20px) clamp(20px, 2vw, 30px);
             position: relative;
-            min-height: 250px;
+            min-height: clamp(200px, 25vh, 300px);
         }
 
         .footer {
